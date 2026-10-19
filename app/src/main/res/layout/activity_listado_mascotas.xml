@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#FFFFFF"
+    android:fitsSystemWindows="true"
+    tools:context=".ListadoMascotasActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:id="@+id/tvNombreListado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Noe"
+            android:textSize="14sp"
+            android:textColor="#757575"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Mis mascotas"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#212121"/>
+
+        <ImageButton
+            android:id="@+id/btnAgregarMascota"
+            android:src="@drawable/ic_add"
+            app:tint="@color/white"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:text="+"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#FF5252"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:insetLeft="0dp"
+            android:insetRight="0dp"
+            app:cornerRadius="8dp"/>
+    </LinearLayout>
+
+    <!-- Barra de búsqueda -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Buscar Mascota"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:hintTextColor="#212121"
+        android:textColorHint="#757575"
+        android:layout_marginBottom="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etBuscarMascota"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#212121"
+            android:inputType="text"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- ListView de mascotas -->
+    <ListView
+        android:id="@+id/lvMascotas"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="0.5dp"
+
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Botón Salir -->
+    <Button
+        android:id="@+id/btnSalir"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Salir"
+        android:textColor="#757575"
+        style="?attr/materialButtonOutlinedStyle"
+        app:strokeColor="#757575"
+        app:cornerRadius="8dp"/>
+
+</LinearLayout>
